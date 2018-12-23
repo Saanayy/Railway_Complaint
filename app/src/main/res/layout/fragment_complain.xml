@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.ComplainFragment">
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/complain_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="@drawable/fragment_background"
+            android:padding="20dp">
+
+            <Spinner
+                android:id="@+id/category_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/spinner_border"
+                android:dropDownSelector="@color/textdarkgrey"
+                android:padding="10dp" />
+
+            <Spinner
+                android:id="@+id/subcategory_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/category_spinner"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/spinner_border"
+                android:padding="10dp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/complaint_image"
+                android:layout_width="match_parent"
+                android:layout_height="320dp"
+                android:layout_below="@+id/subcategory_spinner"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/primary_color_btn"
+                android:scaleType="fitXY" />
+
+            <EditText
+                android:id="@+id/complaint_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/complaint_image"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/spinner_border"
+                android:enabled="true"
+                android:fontFamily="@font/nunito_semibold"
+                android:gravity="top|left"
+                android:hint="Elaborate on.."
+                android:inputType="textMultiLine"
+                android:lines="3"
+                android:padding="4dp"
+                android:textColor="@color/textdarkgrey" />
+            <ProgressBar
+                style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+                android:id="@+id/complaint_progress"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:indeterminate="true"
+                android:visibility="gone"
+                android:layout_below="@+id/complaint_text"
+                android:layout_marginTop="2dp"
+                />
+
+            <Button
+                android:id="@+id/submit_complaint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/complaint_progress"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/primary_color_btn"
+                android:fontFamily="@font/nunito_semibold"
+                android:text="Submit Complaint"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>
+
+</FrameLayout>
